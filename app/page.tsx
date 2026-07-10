@@ -45,16 +45,16 @@ export default function HomePage() {
                 tu puerta. Ingredientes frescos, sabor de siempre.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Button render={<Link href="/pedido" />} size="lg" className="h-11 px-6 text-base">
-                  Hacer mi pedido
+                <Button render={<Link href="/#menu" />} size="lg" className="h-11 px-6 text-base">
+                  Ver el menú
                 </Button>
                 <Button
-                  render={<Link href="#menu" />}
+                  render={<Link href="/pedido" />}
                   size="lg"
                   variant="outline"
                   className="h-11 border-sidebar-border bg-transparent px-6 text-base text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                 >
-                  Ver el menú
+                  Mi pedido
                 </Button>
               </div>
             </div>
