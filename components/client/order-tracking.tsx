@@ -44,10 +44,10 @@ export function OrderTracking({ id }: { id: string }) {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <Link
-            href="/"
-            className="mb-2 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+            href="/#menu"
+            className="mb-2 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            <ArrowLeft className="size-4" />
+            <ArrowLeft className="size-4" aria-hidden="true" />
             Volver al menú
           </Link>
           <h1 className="font-display text-3xl font-extrabold">
