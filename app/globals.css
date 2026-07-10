@@ -1,0 +1,151 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Order state semantic tokens */
+  --color-estado-creado: var(--estado-creado);
+  --color-estado-creado-foreground: var(--estado-creado-foreground);
+  --color-estado-preparacion: var(--estado-preparacion);
+  --color-estado-preparacion-foreground: var(--estado-preparacion-foreground);
+  --color-estado-listo: var(--estado-listo);
+  --color-estado-listo-foreground: var(--estado-listo-foreground);
+  --color-estado-camino: var(--estado-camino);
+  --color-estado-camino-foreground: var(--estado-camino-foreground);
+  --color-estado-entregado: var(--estado-entregado);
+  --color-estado-entregado-foreground: var(--estado-entregado-foreground);
+
+  /* Payment state semantic tokens */
+  --color-pago-pendiente: var(--pago-pendiente);
+  --color-pago-pendiente-foreground: var(--pago-pendiente-foreground);
+  --color-pago-pagado: var(--pago-pagado);
+  --color-pago-pagado-foreground: var(--pago-pagado-foreground);
+  --color-pago-rechazado: var(--pago-rechazado);
+  --color-pago-rechazado-foreground: var(--pago-rechazado-foreground);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+:root {
+  color-scheme: light;
+  --radius: 0.75rem;
+
+  /* Warm neutral background, near-black warm ink text */
+  --background: oklch(0.985 0.006 70);
+  --foreground: oklch(0.22 0.014 40);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.014 40);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.014 40);
+
+  /* Deep warm terracotta red brand */
+  --primary: oklch(0.53 0.176 30);
+  --primary-foreground: oklch(0.99 0.01 80);
+
+  --secondary: oklch(0.955 0.012 70);
+  --secondary-foreground: oklch(0.3 0.02 40);
+
+  --muted: oklch(0.955 0.01 75);
+  --muted-foreground: oklch(0.52 0.02 55);
+
+  /* Gold / mustard accent for premium / signature elements */
+  --accent: oklch(0.79 0.13 76);
+  --accent-foreground: oklch(0.28 0.05 60);
+
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.99 0.01 80);
+
+  --border: oklch(0.9 0.01 70);
+  --input: oklch(0.9 0.01 70);
+  --ring: oklch(0.53 0.176 30);
+
+  /* Order states (independent from brand color) */
+  --estado-creado: oklch(0.93 0.02 250);
+  --estado-creado-foreground: oklch(0.42 0.11 255);
+  --estado-preparacion: oklch(0.94 0.05 80);
+  --estado-preparacion-foreground: oklch(0.48 0.12 65);
+  --estado-listo: oklch(0.93 0.06 150);
+  --estado-listo-foreground: oklch(0.44 0.11 155);
+  --estado-camino: oklch(0.92 0.04 220);
+  --estado-camino-foreground: oklch(0.45 0.13 240);
+  --estado-entregado: oklch(0.93 0.008 70);
+  --estado-entregado-foreground: oklch(0.44 0.02 60);
+
+  /* Payment states */
+  --pago-pendiente: oklch(0.94 0.05 80);
+  --pago-pendiente-foreground: oklch(0.48 0.12 65);
+  --pago-pagado: oklch(0.93 0.06 150);
+  --pago-pagado-foreground: oklch(0.44 0.11 155);
+  --pago-rechazado: oklch(0.94 0.04 25);
+  --pago-rechazado-foreground: oklch(0.5 0.18 27);
+
+  --sidebar: oklch(0.24 0.02 38);
+  --sidebar-foreground: oklch(0.92 0.01 70);
+  --sidebar-primary: oklch(0.53 0.176 30);
+  --sidebar-primary-foreground: oklch(0.99 0.01 80);
+  --sidebar-accent: oklch(0.32 0.02 38);
+  --sidebar-accent-foreground: oklch(0.97 0.01 70);
+  --sidebar-border: oklch(0.34 0.02 38);
+  --sidebar-ring: oklch(0.53 0.176 30);
+
+  --chart-1: oklch(0.53 0.176 30);
+  --chart-2: oklch(0.79 0.13 76);
+  --chart-3: oklch(0.55 0.11 155);
+  --chart-4: oklch(0.5 0.12 240);
+  --chart-5: oklch(0.48 0.12 65);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
